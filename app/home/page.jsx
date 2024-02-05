@@ -1,13 +1,12 @@
-import React  from 'react';
 function Template() {
     return (
         
       <div>
-        <title>Hi</title>
+        
         {/*<Header /> 
         <Sidebar />*/}
         <div className="content">
-        <p>Hello</p>
+        <p>Home</p>
           {/* Your page content goes here */}
         </div>
         {/*<Footer /> 
