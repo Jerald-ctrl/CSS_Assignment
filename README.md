@@ -1,17 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, clone the repo into your folder:
+
+
+
+- Select this branch from the github desktop
+- OR
+```bash
+git clone -b <branch> <repo url>
+git clone -b test https://github.com/Jerald-ctrl/CSS_Assignment
+```
+
+Next, install the dependencies
 
 ```bash
+npm install i 
+```
+Then, just run the server
+``` bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
