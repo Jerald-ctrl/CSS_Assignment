@@ -1,8 +1,24 @@
-.navbar-link {
+.navbar {
+    background: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar-nav {
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-direction: row;
+    width: 35%;
+    
     justify-content: space-around;
     flex-wrap: nowrap; /* assumes you only want one row */
+  }
+
+  .navbar-nav-link
+  {
+    border: 3px solid black;
+    font-size: 30px;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
   }

@@ -10,10 +10,11 @@ function DisplayNavbar() {
       <Navbar className="navbar">
         <Container>
           
-            <Nav className = "navbar-link">
-              <Navbar.Brand href="/home" >Home</Navbar.Brand>
-              <Nav.Link href="/" >API</Nav.Link>
-              <Nav.Link href="/About">About</Nav.Link>
+            <Nav className = "navbar-nav">
+
+              <Navbar.Brand href="/home" className = "navbar-nav-link">HOME</Navbar.Brand>
+              <Nav.Link href="/Steam" className = "navbar-nav-link">STEAM</Nav.Link>
+              <Nav.Link href="/About" className = "navbar-nav-link">ABOUT</Nav.Link>
             </Nav>
            
         </Container>
