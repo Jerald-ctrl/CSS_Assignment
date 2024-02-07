@@ -59,9 +59,19 @@ function SteamScreen() {
     const [contentType, setContentType] = useState(null);
   
     useEffect(() => {
-      fetchData();
-    }, []);
+        fetchData();
+      }, []);
   
+    const url = 'https://video-game-news.p.rapidapi.com/all';
+    const options = {
+          method: 'GET',
+          headers: {
+              'X-RapidAPI-Key': '0578e44fd8msh0e1d0fa04d8c042p10b1d3jsn0d904c5905bf',
+              'X-RapidAPI-Host': 'video-game-news.p.rapidapi.com'
+          }
+      };
+
+
     const fetchData = () => {
       fetch("https://freeipapi.com/api/json/")
         .then(response => {
@@ -70,6 +80,7 @@ function SteamScreen() {
         })
         .then(data => setApiData(data))
         .catch(error => console.error("Error fetching data:", error));
+        
     };
   
     function RenderData()

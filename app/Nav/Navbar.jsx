@@ -14,7 +14,8 @@ function DisplayNavbar() {
 
               <Navbar.Brand href="/home" className = "navbar-nav-link">HOME</Navbar.Brand>
               <Nav.Link href="/Steam" className = "navbar-nav-link">STEAM</Nav.Link>
-              <Nav.Link href="/About" className = "navbar-nav-link">ABOUT</Nav.Link>
+              <Nav.Link href="/Tetris" className = "navbar-nav-link">TETRIS</Nav.Link>
+              <Nav.Link href="/History" className = "navbar-nav-link">HISTORY</Nav.Link>
             </Nav>
            
         </Container>

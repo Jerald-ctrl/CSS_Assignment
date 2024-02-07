@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* It's kinda gay to remove this */
-
+import '@/app/styles.css';
 import Navbar from '@/app/Nav/Navbar';
 //import Navbar from 'react-bootstrap/Navbar';
 import React  from 'react';
@@ -13,7 +13,6 @@ export const metadata = {
    return (
       <html lang="en">
         <body>
-            
             <Navbar/>
             {children}
             </body>
