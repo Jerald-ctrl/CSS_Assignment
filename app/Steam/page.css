@@ -1,0 +1,16 @@
+.api-body
+{
+
+    
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    
+    width: 75%;
+    border: 5px solid;
+    margin: auto;
+    
+    padding: 10px;
+}
