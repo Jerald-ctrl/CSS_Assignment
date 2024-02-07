@@ -1,6 +1,6 @@
 import React  from 'react';
 function Template() {
-
+/*
   const url = 'https://opencritic-api.p.rapidapi.com/game/popular';
 const options = {
 	method: 'GET',
@@ -21,6 +21,7 @@ async function API () {
 }
 
     API()
+    */
     return (
       
       <div>
