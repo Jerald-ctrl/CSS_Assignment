@@ -130,26 +130,42 @@ export default function App() {
     const [chartData, setChartData] = useState(
         {
         labels: Data.map((data) => data.year), 
+         /*label: "Users Gained ",*/
         datasets: [
-          {
-            label: "Users Gained ",
-            data: Data.map((data) => data.userGain),
-            
-
-          }
-        ],
-        hi: 1
+            {
+              label: "User Gain",
+              data: Data.map((data) => data.userGain)
+            },
+            {
+                label: "User Loss",
+                data: Data.map((data) => data.userLost)
+            },
+          ],        
         }
         );
         
-
-  return (
-    <div className="App">
-      
-      <LineChart chartData={chartData} />
-    </div>
-  );
-  
+    
+        return (
+            <div className="api-body" id = "container">
+              <div id = 'api-body-text'>
+              <h1>Welcome to my Chart App!</h1>
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                
+              </div >
+              
+              <LineChart chartData={chartData} options={{ maintainAspectRatio: false }} id="api-body-chart"/>
+            
+              
+            </div>
+          );
+    
+ 
+   
   }
 
 
