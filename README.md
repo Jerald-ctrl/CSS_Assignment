@@ -14,7 +14,7 @@ git clone -b test https://github.com/Jerald-ctrl/CSS_Assignment
 Next, install the dependencies
 
 ```bash
-npm install i 
+npm install 
 ```
 Then, just run the server
 ``` bash
