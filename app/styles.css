@@ -1,5 +1,6 @@
 /*makes the content touch the ends */
 body {
     margin: 0; 
-   
+    background-color: #4b4c4e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

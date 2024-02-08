@@ -146,13 +146,13 @@ export default function App() {
         
     
         return (
-            <div className="api-body" id = "container">
+            <div>
+                <div className="api-body" id = "container">
               <div id = 'api-body-text'>
               <h1>Welcome to my Chart App!</h1>
                 <p>This is some additional text.</p>
-                <p>This is some additional text.</p>
-                <p>This is some additional text.</p>
-                <p>This is some additional text.</p>
+                
+                
                 <p>This is some additional text.</p>
                 <p>This is some additional text.</p>
                 
@@ -161,7 +161,40 @@ export default function App() {
               <LineChart chartData={chartData} options={{ maintainAspectRatio: false }} id="api-body-chart"/>
             
               
+                </div>
+                <div className="api-body" id = "container">
+              <div id = 'api-body-text'>
+              <h1>Welcome to my Chart App!</h1>
+                <p>This is some additional text.</p>
+                
+                
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                
+              </div >
+              
+              <LineChart chartData={chartData} options={{ maintainAspectRatio: false }} id="api-body-chart"/>
+            
+              
+                </div>
+                <div className="api-body" id = "container">
+              <div id = 'api-body-text'>
+              <h1>Welcome to my Chart App!</h1>
+                <p>This is some additional text.</p>
+                
+                
+                <p>This is some additional text.</p>
+                <p>This is some additional text.</p>
+                
+              </div >
+              
+              <LineChart chartData={chartData} options={{ maintainAspectRatio: false }} id="api-body-chart"/>
+            
+              
+                </div>
             </div>
+            
+            
           );
     
  
