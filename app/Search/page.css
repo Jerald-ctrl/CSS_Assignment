@@ -1,4 +1,4 @@
-.api-body
+.Search-body
 {
 
     
@@ -8,11 +8,31 @@
     align-items: top;
     justify-content: space-evenly;
     
-    border: 5px solid;
+    
     margin: auto;
     background-color: #696c77; 
     padding: 10px;
     
+}
+.Search-input
+{
+
+    
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    border: 5px solid;
+    margin: auto;
+    background-color: #696c77; 
+    spacing: 0px;
+    
+}
+#Search-input
+{
+    width: 75%;
 }
 
 #container
@@ -29,7 +49,7 @@
     max-width: 60%;
 }
 
-#api-body-text
+#Search-body-text
 {
     /*width: 30%;
     height: 30%; */
