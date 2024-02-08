@@ -159,7 +159,7 @@ export default function App() {
         ]
       });
       
-      console.log('mapped' + {chartData});
+      
       setUpdate(true);
       setClicked(false); 
     }
@@ -197,7 +197,7 @@ async function callAPI() {
 
 function handleButtonClick()
 {
-  console.log("Clicked");
+
  
   setClicked((prev) => prev+1);
 }  
