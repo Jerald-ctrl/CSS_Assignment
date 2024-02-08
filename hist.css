@@ -1,0 +1,13 @@
+.alldiv {
+  background-color: darkviolet;
+  text-align: center;
+  font-size:xx-large;
+  margin: 50px;
+  padding: 100px;
+  color: yellow;
+  border-color: black;
+
+  border-width: thin;
+  border-radius: 25px;
+  font-family: sans-serif;
+}
