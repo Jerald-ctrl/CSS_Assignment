@@ -209,8 +209,8 @@ function handleButtonClick()
        
         <div className="Search-body" id="container">
           <div id='Search-body-text'>
-            <h1>{textboxValue}</h1>
-            <p>This is a work in progress</p>
+            <h1>Game: {textboxValue}</h1>
+            <p>Description: </p>
             
            
           </div >

@@ -23,17 +23,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
-    border: 5px solid;
     margin: auto;
     background-color: #696c77; 
     spacing: 0px;
-    
+    min-height: 50px;
 }
-#Search-input
-{
-    width: 75%;
-}
+
 
 #container
 {
