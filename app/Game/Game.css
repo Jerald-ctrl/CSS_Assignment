@@ -15,6 +15,7 @@
 .controls {
     margin-top: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .button {
@@ -23,4 +24,39 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
     color: black;
     background-color: grey;
+    text-align: center;
+}
+body{
+    background-color: #808080;
+}
+.Title {
+    text-align: center;
+    text-size-adjust: 30px;
+    color: aliceblue;
+    text-decoration: none;
+}
+h1{
+    color: green;
+	font-size: 5rem;
+	font-family: "Space Mono", monospace;
+    text-align: center;
+}
+p {
+    margin: 30px;
+    padding: 20px;
+    border: 10px solid #999;
+    text-align: left;
+  }
+h3{
+    text-align: left;
+    margin: 30px;
+    padding: 20px;
+    border: 10px solid #999;
+    text-align: left;
+}
+ul{
+    margin: 30px;
+    padding: 20px;
+    border: 10px solid #999;
+    text-align: left;
 }

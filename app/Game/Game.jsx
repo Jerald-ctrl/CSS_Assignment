@@ -4,9 +4,9 @@ import React from 'react';
 import './Game.css';
 
 
-const CELL_SIZE = 10;
-const WIDTH = 1300;
-const HEIGHT = 1000;
+const CELL_SIZE = 20;
+const WIDTH = 1000;
+const HEIGHT = 800;
 
 
 class Cell extends React.Component {
@@ -200,7 +200,7 @@ class Game extends React.Component {
             </div>
         );
     }
-}
 
+}
 
 export default Game;

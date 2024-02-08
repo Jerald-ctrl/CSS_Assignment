@@ -18,10 +18,11 @@
 
   .navbar-nav-link
   {
-    
-    font-size: 45px;
-    color: white;
     width: fit-content;
     height: fit-content;
     text-decoration: none;
+    color: green;
+	  font-size: 5rem;
+	  font-family: "Space Mono", monospace;
+    justify-content: center;
   }
