@@ -12,7 +12,7 @@ function DisplayNavbar() {
           
             <Nav className = "navbar-nav">
 
-              <Navbar.Brand href="/home" className = "navbar-nav-link">HOME</Navbar.Brand>
+             
               <Nav.Link href="/Search" className = "navbar-nav-link">SEARCH</Nav.Link>
               <Nav.Link href="/Game" className = "navbar-nav-link">GAME</Nav.Link>
               <Nav.Link href="/History" className = "navbar-nav-link">HISTORY</Nav.Link>

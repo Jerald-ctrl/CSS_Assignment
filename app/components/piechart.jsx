@@ -3,8 +3,11 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 
 function PieChart({ chartData }) {
+
+
+  
   return (
-    <div className="chart-container">
+    <div id="chart-container">
       <Pie
         data={chartData}
         options={{
@@ -13,7 +16,8 @@ function PieChart({ chartData }) {
               display: true,
               text: "User Rating"
             }
-          }
+          },
+          maintainAspectRatio: false // Add this option to ignore aspect ratio
         }}
       />
     </div>

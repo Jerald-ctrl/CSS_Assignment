@@ -7,14 +7,14 @@ import React from "react";
 import { CategoryScale } from "chart.js";
 import { useState } from "react";
 import { useEffect, useRef } from "react";
-import LineChart from "@/app/Search/chart.jsx";
-import PieChart from "./piechart";
+
+import PieChart from "../components/piechart";
 // import PieChart from './piechart';
 
 
-
+// init code for chart
 Chart.register(CategoryScale);
-{/* Uhh this is a version that assumes the data is already initialised, this should init a empty fields first before populating it*/ }
+
 
 
 
@@ -26,16 +26,24 @@ export default function App() {
   const [chartData3, setChartData3] = useState(null);
   const [apiResponse, setApiResponse] = useState(null);
   const inputRef = useRef();
- //useEffect that tracks each time the button is pressed
+
  
  
   useEffect(() => {
 
-    if (clicked > 0) {
+    if (clicked > 0) { 
+      //ensures that the code only runs when the button is pressed at least once
+
+
   setallChartData();
   console.log("setChartData called");
   
   function setallChartData() {
+    //sets the value of all the chart Data
+    if (!apiResponse || apiResponse.length < 3) {
+      // Handle the case when apiResponse is null or doesn't have enough data
+      return;
+    }
   setChartData1( {
     labels: ["User likes","User dislikes"], 
     datasets: [
@@ -91,8 +99,10 @@ export default function App() {
     ]
   });
 }
-      setUpdate(true);
-      setClicked(false); 
+
+      setUpdate(true); 
+      console.log("Set update to true");
+      
     }
   }, [apiResponse]); // Dependency array ensures this effect runs only when `clicked` changes
 
@@ -105,9 +115,10 @@ export default function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': "8h9MSa7wuD3E6FCP59yCg4U54FRsPNod83WtGv6c",
+          'x-api-key':  "8h9MSa7wuD3E6FCP59yCg4U54FRsPNod83WtGv6c",
         },
-        body: `fields id,name,rating,cover; where name ~ "${inputRef.current.value}"*; sort rating desc; limit 3;`
+        body: `fields id,name,rating,slug; where name ~ "${inputRef.current.value}"*; sort rating desc; limit 3;` 
+        //use of template literal to prevent spacing errors (DOCS)
     });
   
     const data = await res.json();
@@ -118,12 +129,7 @@ export default function App() {
   }
 
 {
-  function handleTextboxChange(){
-  
-    
-    
-   
-  };
+
 
 async function handleButtonClick()
 {
@@ -136,9 +142,22 @@ async function handleButtonClick()
 }  
 
 function DisplayData () {
+
+ 
   console.log("Displayed Data")
-  console.log(apiResponse[0].name)
+    if (!apiResponse || apiResponse.length < 3) {
+      //check if apiResponse is not fully fulfilled.
+    
+      return (
+      <div className="Search-body" id="container">
+      <h1>Data not fully fulfilled. Please try another search</h1>
+      
+      
+    </div>);
+    }
+
   return (
+    // return function for main page
     <div>
      
      <div className="Search-body" id="container">
@@ -146,30 +165,48 @@ function DisplayData () {
          
           <p>Game: {apiResponse[0].name}</p>
           <p>ID: {apiResponse[0].id}</p>
-          <p>Rating: {apiResponse[0].rating}</p>
+          {/* Conditionally render the rating */}
+          {typeof apiResponse[0].rating !== 'undefined' ? (
+            <p>Rating: {apiResponse[0].rating}</p>
+          ) : (
+            <p>Rating: Rating not found</p>
+          )}
+          <a href={`https://www.igdb.com/games/${apiResponse[0].slug}`}>Game Website</a>
         </div >
         <PieChart chartData={chartData1}/>
-        {/* <LineChart chartData={chartData} />    */}
+        
       </div>
       <div className="Search-body" id="container">
         <div id='Search-body-text'>
          
           <p>Game: {apiResponse[1].name}</p>
           <p>ID: {apiResponse[1].id}</p>
-          <p>Rating: {apiResponse[1].rating}</p>
+          {/* Conditionally render the rating */}
+          {typeof apiResponse[1].rating !== 'undefined' ? (
+            <p>Rating: {apiResponse[1].rating}</p>
+          ) : (
+            <p>Rating: Rating not found</p>
+          )}
+          <a href={`https://www.igdb.com/games/${apiResponse[1].slug}`}>Game Website</a>
         </div >
         <PieChart chartData={chartData2}/>
-        {/* <LineChart chartData={chartData} />    */}
+       
       </div>
       <div className="Search-body" id="container">
         <div id='Search-body-text'>
           
           <p>Game: {apiResponse[2].name}</p>
           <p>ID: {apiResponse[2].id}</p>
-          <p>Rating: {apiResponse[2].rating}</p>
+          {/* Conditionally render the rating */}
+          {typeof apiResponse[2].rating !== 'undefined' ? (
+            <p>Rating: {apiResponse[2].rating}</p>
+          ) : (
+            <p>Rating: Rating not found</p>
+          )}
+          <a href={`https://www.igdb.com/games/${apiResponse[2].slug}`}>Game Website</a>
         </div >
         <PieChart chartData={chartData3}/>
-        {/* <LineChart chartData={chartData} />    */}
+  
       </div>
     </div>
   );
@@ -178,15 +215,15 @@ function DisplayData () {
 
   return (
     
-    <div>
-      <div className = 'Search-input' id="container">
+    <div id="container" >
+      <div className = "Search-input" >
       <label>
       
-      <input type="text" ref={inputRef}id="Search-input"/>
+      <input type="text" ref={inputRef}/>
         {/* <input value={firstName} onChange={e => setFirstName(e.target.value)} /> */}
       </label>
       
-      <button onClick={handleButtonClick}>Render Chart</button>
+      <button onClick={handleButtonClick}>Search Games</button>
       </div>
       
       {chartData1 && (
