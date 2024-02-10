@@ -149,7 +149,7 @@ function DisplayData () {
       //check if apiResponse is not fully fulfilled.
     
       return (
-      <div className="Search-body" id="container">
+      <div className="search-body" id="container">
       <h1>Data not fully fulfilled. Please try another search</h1>
       
       
@@ -160,8 +160,8 @@ function DisplayData () {
     // return function for main page
     <div>
      
-     <div className="Search-body" id="container">
-        <div id='Search-body-text'>
+     <div className="search-body" id="container">
+        <div id='search-body-text'>
          
           <p>Game: {apiResponse[0].name}</p>
           <p>ID: {apiResponse[0].id}</p>
@@ -176,8 +176,8 @@ function DisplayData () {
         <PieChart chartData={chartData1}/>
         
       </div>
-      <div className="Search-body" id="container">
-        <div id='Search-body-text'>
+      <div className="search-body" id="container">
+        <div id='search-body-text'>
          
           <p>Game: {apiResponse[1].name}</p>
           <p>ID: {apiResponse[1].id}</p>
@@ -192,8 +192,8 @@ function DisplayData () {
         <PieChart chartData={chartData2}/>
        
       </div>
-      <div className="Search-body" id="container">
-        <div id='Search-body-text'>
+      <div className="search-body" id="container">
+        <div id='search-body-text'>
           
           <p>Game: {apiResponse[2].name}</p>
           <p>ID: {apiResponse[2].id}</p>
@@ -216,7 +216,7 @@ function DisplayData () {
   return (
     
     <div id="container" >
-      <div className = "Search-input" >
+      <div className = "search-input" >
       <label>
       
       <input type="text" ref={inputRef}/>

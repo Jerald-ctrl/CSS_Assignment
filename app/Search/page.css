@@ -3,7 +3,7 @@ body {
     padding: 50px;
     /* background-color: #696c77;  */
 }
-.Search-body
+.search-body
 {
 
     
@@ -20,7 +20,7 @@ body {
     border-style: solid;
     border-color: black;
 }
-.Search-input
+.search-input
 {
 
     
@@ -31,7 +31,7 @@ body {
     justify-content: center;
     margin: auto;
     background-color: #e7b314;
-    spacing: 0px;
+   
     min-height: 50px;
     width: 100%;
 }
@@ -52,7 +52,7 @@ body {
     padding: 5px;
 
 }
-#Search-body-text
+#search-body-text
 {
     /*width: 30%;
     height: 30%; */
