@@ -41,7 +41,8 @@
 
     background-color: lightgreen;
     flex-grow: 1;
-    max-width: 60%;
+    max-width: 40%;
+    max-height: fit-content;
 }
 
 #Search-body-text

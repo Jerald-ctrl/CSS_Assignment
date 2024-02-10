@@ -2,7 +2,6 @@
   "name": "my-app--js--use-npm--eslint--app--no-src-dir--no-tailwind--import-alias",
   "version": "0.1.0",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,11 +10,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "chartjs": "^0.3.24",
     "next": "14.0.2",
     "react": "^18",
     "react-bootstrap": "^2.10.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18"
-   
   }
 }
